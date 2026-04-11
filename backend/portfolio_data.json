@@ -1,0 +1,305 @@
+{
+  "homepage": {
+    "name": "PRIYANSH",
+    "subheading": "Data Science | Generative AI & Agentic AI | AI/ML",
+    "cta_text": "Let's Work",
+    "cta_email": "ipriyanshyadav@gmail.com",
+    "note_enabled": true,
+    "note_text": " ",
+    "status_enabled": false,
+    "status_text": "Available for opportunities"
+  },
+  "about": {
+    "intro": "Skilled in Generative AI, Agentic AI, RAG pipelines, and deep learning \u2014 with 3 internships delivering production-ready AI/ML systems across data science and Python backend domains. Driven to engineer intelligent, scalable solutions with clean efficient code.",
+    "contact_enabled": true,
+    "highlights": [
+      "2026 Graduate",
+      "Worked on PwC's NTH Project",
+      "Skilled in Generative AI, Agentic AI, RAG pipelines, and deep learning"
+    ]
+  },
+  "contact": {
+    "email": "ipriyanshyadav@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/priyanshyadav-/",
+    "github": "https://github.com/ipriyanshyadav"
+  },
+  "projects": [
+    {
+      "id": "20260412005522366149",
+      "title": "Image Captioning",
+      "description": "Developed an end-to-end image captioning pipeline using a ResNet-50 encoder and LSTM-based decoder trained on Flickr8K images, achieving a BLEU score of 0.7 \u2014 demonstrating strong caption coherence and context-awareness. Implemented semantic image segmentation using DeepLabV3 with ResNet-50 backbone for pixel-level object classification, enhancing the system's visual understanding capabilities.",
+      "image_url": "/uploads/20260412012619.png",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "CNN",
+        "LSTM"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/Image-Captioning-and-Segmentation",
+      "live_url": "https://huggingface.co/spaces/ipriyanshyadav/DL-Image-Captioning",
+      "featured": true
+    },
+    {
+      "id": "20260412010224386821",
+      "title": "Personalised Healthcare Recommendation System",
+      "description": "Built a personalized healthcare recommendation system leveraging machine learning and data-driven insights to suggest medicines, lifestyle changes, and treatment plans. Engineered a multi-model recommendation engine combining classification models, feature engineering, and health data analysis for personalized medical suggestions. Designed an end-to-end pipeline integrating backend APIs and interactive interfaces to deliver real-time, explainable healthcare recommendations. Addressed healthcare decision complexity by transforming patient data into actionable insights for improved diagnosis and preventive care.",
+      "image_url": "/uploads/20260412012654.png",
+      "tech_stack": [
+        "Python",
+        "Machine Learning",
+        "FastAPI",
+        "Streamlit",
+        "NLP"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/Personalised-Healthcare-Recommendation-System",
+      "live_url": "https://huggingface.co/spaces/ipriyanshyadav/AIML-Personalized-Healthcare-Recommendation-System",
+      "featured": true
+    },
+    {
+      "id": "20260412010354896315",
+      "title": "NLP Duplicate Question Pairs",
+      "description": "Developed a machine learning model to identify duplicate questions using TF-IDF vectorization and similarity metrics. Engineered feature extraction techniques including cosine similarity and semantic overlap to improve detection accuracy. Optimized model performance for large-scale datasets, enabling efficient question deduplication.",
+      "image_url": "/uploads/20260412012729.png",
+      "tech_stack": [
+        "Python",
+        "NLP",
+        "Scikit-learn",
+        "TF-IDF"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/NLP-Duplicate-Question-Pairs",
+      "live_url": "https://huggingface.co/spaces/ipriyanshyadav/NLP-Duplicate-Question-Pairs?logs=build",
+      "featured": true
+    },
+    {
+      "id": "20260412010535215249",
+      "title": "Patient Management System",
+      "description": "Designed a patient management system to handle medical records, appointments, and treatment history with secure database integration. Implemented backend APIs for efficient data retrieval and updates, ensuring reliability in healthcare workflows. Structured relational database schemas to maintain consistency and integrity of patient information.",
+      "image_url": "/uploads/20260412012747.png",
+      "tech_stack": [
+        "Python",
+        "FastAPI/Flask",
+        "MySQL"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/Patient-Management-System",
+      "live_url": "https://huggingface.co/spaces/ipriyanshyadav/FastAPI-Patient-Management-System",
+      "featured": true
+    },
+    {
+      "id": "20260412010701666954",
+      "title": "AI Chatbot with Sentiment Analysis",
+      "description": "Built an intelligent chatbot integrated with sentiment analysis to classify user emotions and adapt responses dynamically. Implemented NLP pipelines including tokenization, vectorization, and classification models to improve conversational accuracy. Enhanced user interaction by enabling emotion-aware responses, improving engagement and contextual relevance.",
+      "image_url": "/uploads/20260412012803.png",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "NLTK/Spacy",
+        "Machine Learning"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/ai-chatbot-sentiment",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "20260412010822470412",
+      "title": "Expense Tracker",
+      "description": "Built an intelligent chatbot integrated with sentiment analysis to classify user emotions and adapt responses dynamically. Implemented NLP pipelines including tokenization, vectorization, and classification models to improve conversational accuracy. Enhanced user interaction by enabling emotion-aware responses, improving engagement and contextual relevance.",
+      "image_url": "/uploads/20260412012816.png",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "Java Script",
+        "Claude Code"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/Expense-Tracker",
+      "live_url": null,
+      "featured": false
+    },
+    {
+      "id": "20260412010948837095",
+      "title": "Insurance Premium Prediction",
+      "description": "Developed a machine learning model to predict health insurance premiums based on user attributes such as age, BMI, smoking habits, and dependents. Applied end-to-end ML workflow including data preprocessing, feature engineering, model training, and evaluation using regression algorithms. Compared multiple models including Linear Regression, Random Forest, and Gradient Boosting to optimize prediction accuracy and performance. Built a predictive system enabling users to estimate insurance costs, supporting better financial and healthcare planning decisions.",
+      "image_url": "/uploads/20260412012831.png",
+      "tech_stack": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Machine Learning",
+        "Data Visualisation"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/Insurance-Premium-Prediction",
+      "live_url": null,
+      "featured": false
+    }
+  ],
+  "skills": [
+    {
+      "id": "20260412003858962335",
+      "name": "Python",
+      "category": "Programming",
+      "logo": null
+    },
+    {
+      "id": "20260412003905988171",
+      "name": "MySQL",
+      "category": "Programming",
+      "logo": null
+    },
+    {
+      "id": "20260412003937425004",
+      "name": "Agentic AI",
+      "category": "Artificial Intelligence and Machine Learning",
+      "logo": null
+    },
+    {
+      "id": "20260412003949043152",
+      "name": "Generative AI",
+      "category": "Artificial Intelligence and Machine Learning",
+      "logo": null
+    },
+    {
+      "id": "20260412004005207961",
+      "name": "Machine Learning",
+      "category": "Artificial Intelligence and Machine Learning",
+      "logo": null
+    },
+    {
+      "id": "20260412004014189798",
+      "name": "Deep Learning",
+      "category": "Artificial Intelligence and Machine Learning",
+      "logo": null
+    },
+    {
+      "id": "20260412004057142002",
+      "name": "Natural Language Processing",
+      "category": "Artificial Intelligence and Machine Learning",
+      "logo": null
+    },
+    {
+      "id": "20260412004132386176",
+      "name": "PyTorch",
+      "category": "Frameworks",
+      "logo": null
+    },
+    {
+      "id": "20260412004147101325",
+      "name": "Langchain",
+      "category": "Frameworks",
+      "logo": null
+    },
+    {
+      "id": "20260412004203788810",
+      "name": "LangGraph",
+      "category": "Frameworks",
+      "logo": null
+    },
+    {
+      "id": "20260412004209612735",
+      "name": "Langsmith",
+      "category": "Frameworks",
+      "logo": null
+    },
+    {
+      "id": "20260412004219490106",
+      "name": "Scikit-learn",
+      "category": "Frameworks",
+      "logo": null
+    },
+    {
+      "id": "20260412004227200286",
+      "name": "FastAPI",
+      "category": "Frameworks",
+      "logo": null
+    },
+    {
+      "id": "20260412004239434706",
+      "name": "Pandas",
+      "category": "Libraries",
+      "logo": null
+    },
+    {
+      "id": "20260412004242612626",
+      "name": "NumPy",
+      "category": "Libraries",
+      "logo": null
+    },
+    {
+      "id": "20260412004247968021",
+      "name": "Matplotlib",
+      "category": "Libraries",
+      "logo": null
+    },
+    {
+      "id": "20260412004259873470",
+      "name": "Git",
+      "category": "Tools and Platforms",
+      "logo": null
+    },
+    {
+      "id": "20260412004304346230",
+      "name": "Github",
+      "category": "Tools and Platforms",
+      "logo": null
+    },
+    {
+      "id": "20260412004310918498",
+      "name": "Claude Code",
+      "category": "Tools and Platforms",
+      "logo": null
+    },
+    {
+      "id": "20260412004320069995",
+      "name": "Huggingface",
+      "category": "Tools and Platforms",
+      "logo": null
+    }
+  ],
+  "experience": [
+    {
+      "id": "20260412004637815052",
+      "role": "Python Developer trainee",
+      "company": "Mobifly (PwC Project \u2013 NTH)",
+      "start_date": "2025-11",
+      "end_date": "2026-02",
+      "location": "Gurgaon, Haryana",
+      "is_current": false,
+      "highlights": [
+        "Resolved 40+ bugs and implemented new features on PwC's Navigation Tax Hub (NTH) \u2014 a critical tax management platform serving Chartered Accountants \u2014 accelerating system stability and production readiness.",
+        "Engineered and deployed an AI-powered voice chatbot from scratch using Python backend services with integrated speech-to-text inference, enabling seamless voice-driven interactions for end users.",
+        "Led end-to-end development of a Task Management System, architecting 30+ RESTful CRUD APIs and designing the complete database schema, reducing manual task tracking effort significantly.",
+        "Implemented API abstraction layers to orchestrate AI inference workflows, ensuring reliable communication across voice input, backend services, and downstream systems with zero downtime."
+      ]
+    },
+    {
+      "id": "20260412004845483905",
+      "role": "Data Science & Analysis trainee",
+      "company": "Zidio Development",
+      "start_date": "2025-06",
+      "end_date": "2025-10",
+      "location": "Bangalore, Karnataka",
+      "is_current": false,
+      "highlights": [
+        "Architected and deployed a RAG-based AI chatbot and personalized recommendation system using LLMs, NLP, and ML/DL algorithms, achieving 92% retrieval accuracy and enabling context-aware, personalized user interactions.",
+        "Engineered features on a 30K-record supervised dataset using Pandas, driving high-quality model inputs and reducing data inconsistencies that improved downstream model performance.",
+        "Developed automated test cases in Python and built Matplotlib-based visualizations and analytical dashboards to support model evaluation, performance monitoring, and stakeholder reporting."
+      ]
+    },
+    {
+      "id": "20260412004957832011",
+      "role": "Data Science Intern",
+      "company": "Pratinik Infotech",
+      "start_date": "2025-04",
+      "end_date": "2025-06",
+      "location": "Gurgaon, Haryana",
+      "is_current": false,
+      "highlights": [
+        "Designed and delivered a personalized healthcare recommendation system for disease prediction and medicine suggestions by leveraging CNN and LSTM deep learning architectures with NLP-based techniques.",
+        "Achieved 84% training accuracy on disease prediction models through systematic deep learning model evaluation, feature engineering, and iterative model tuning across the full ML pipeline."
+      ]
+    }
+  ]
+}
