@@ -51,7 +51,7 @@ export default function Projects() {
                 style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(168,85,247,0.2) 100%)' }}
               >
                 {project.image_url ? (
-                  <img src={`${API_BASE}${project.image_url}`} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={project.image_url.startsWith('http') ? project.image_url : `${API_BASE}${project.image_url}`} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
                 ) : (
                   <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -161,7 +161,7 @@ export default function Projects() {
                   style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(168,85,247,0.2) 100%)' }}
                 >
                   {selectedProject.image_url ? (
-                    <img src={`${API_BASE}${selectedProject.image_url}`} alt={selectedProject.title} className="w-full h-auto object-contain rounded-xl" />
+                    <img src={selectedProject.image_url.startsWith('http') ? selectedProject.image_url : `${API_BASE}${selectedProject.image_url}`} alt={selectedProject.title} className="w-full h-auto object-contain rounded-xl" />
                   ) : (
                     <div className="h-40 flex items-center justify-center">
                       <svg className="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
