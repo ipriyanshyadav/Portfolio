@@ -42,14 +42,13 @@ app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
 
 # CORS
 _frontend_url = os.getenv("FRONTEND_URL", "*")
-ALLOWED_ORIGINS = ["*"] if _frontend_url == "*" else [
-    *[u.strip() for u in _frontend_url.split(",")],
-    "http://localhost:3000"
-]
+ALLOWED_ORIGINS = ["*"] if _frontend_url == "*" else list({
+    u.strip().rstrip("/") for u in _frontend_url.split(",") if u.strip()
+} | {"http://localhost:3000"})
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
-    allow_credentials=ALLOWED_ORIGINS != ["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
