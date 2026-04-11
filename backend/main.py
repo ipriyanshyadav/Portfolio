@@ -28,16 +28,16 @@ app = FastAPI(title="Portfolio API", version="1.0.0")
 DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 _writable = "/tmp" if not os.access(DATA_DIR, os.W_OK) else DATA_DIR
 DATA_FILE = os.path.join(_writable, "portfolio_data.json")
-UPLOADS_DIR = os.path.join(_writable, "uploads")
-CV_DIR = os.path.join(_writable, "cv")
-os.makedirs(UPLOADS_DIR, exist_ok=True)
-os.makedirs(CV_DIR, exist_ok=True)
+UPLOADS_DIR = os.path.join(DATA_DIR, "uploads")
+CV_DIR = os.path.join(DATA_DIR, "cv")
+os.makedirs(os.path.join(_writable, "uploads"), exist_ok=True)
+os.makedirs(os.path.join(_writable, "cv"), exist_ok=True)
 _bundled = os.path.join(DATA_DIR, "portfolio_data.json")
 if not os.path.exists(DATA_FILE) and os.path.exists(_bundled):
     import shutil
     shutil.copy(_bundled, DATA_FILE)
 
-# Serve uploaded images as static files
+# Serve uploaded images as static files (from repo directory)
 app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
 
 # CORS
