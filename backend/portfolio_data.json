@@ -2,7 +2,7 @@
   "homepage": {
     "name": "PRIYANSH",
     "subheading": "Data Science | Generative AI & Agentic AI | AI/ML",
-    "cta_text": "Let's Work",
+    "cta_text": "Let's Work Together ",
     "cta_email": "ipriyanshyadav@gmail.com",
     "note_enabled": true,
     "note_text": " ",
@@ -38,7 +38,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/Image-Captioning-and-Segmentation",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/DL-Image-Captioning",
-      "featured": true
+      "featured": true,
+      "order": 0
     },
     {
       "id": "20260412010224386821",
@@ -54,7 +55,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/Personalised-Healthcare-Recommendation-System",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/AIML-Personalized-Healthcare-Recommendation-System",
-      "featured": true
+      "featured": true,
+      "order": 0
     },
     {
       "id": "20260412010354896315",
@@ -69,7 +71,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/NLP-Duplicate-Question-Pairs",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/NLP-Duplicate-Question-Pairs?logs=build",
-      "featured": true
+      "featured": true,
+      "order": 0
     },
     {
       "id": "20260412010535215249",
@@ -83,7 +86,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/Patient-Management-System",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/FastAPI-Patient-Management-System",
-      "featured": true
+      "featured": true,
+      "order": 0
     },
     {
       "id": "20260412010701666954",
@@ -98,7 +102,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/ai-chatbot-sentiment",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "order": 0
     },
     {
       "id": "20260412010822470412",
@@ -116,7 +121,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/Expense-Tracker",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "order": 0
     },
     {
       "id": "20260412010948837095",
@@ -133,7 +139,8 @@
       ],
       "github_url": "https://github.com/ipriyanshyadav/Insurance-Premium-Prediction",
       "live_url": null,
-      "featured": false
+      "featured": false,
+      "order": 0
     }
   ],
   "skills": [
@@ -141,121 +148,141 @@
       "id": "20260412003858962335",
       "name": "Python",
       "category": "Programming",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412003905988171",
       "name": "MySQL",
       "category": "Programming",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412003937425004",
       "name": "Agentic AI",
       "category": "Artificial Intelligence and Machine Learning",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412003949043152",
       "name": "Generative AI",
       "category": "Artificial Intelligence and Machine Learning",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004005207961",
       "name": "Machine Learning",
       "category": "Artificial Intelligence and Machine Learning",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004014189798",
       "name": "Deep Learning",
       "category": "Artificial Intelligence and Machine Learning",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004057142002",
       "name": "Natural Language Processing",
       "category": "Artificial Intelligence and Machine Learning",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004132386176",
       "name": "PyTorch",
       "category": "Frameworks",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004147101325",
       "name": "Langchain",
       "category": "Frameworks",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004203788810",
       "name": "LangGraph",
       "category": "Frameworks",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004209612735",
       "name": "Langsmith",
       "category": "Frameworks",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004219490106",
       "name": "Scikit-learn",
       "category": "Frameworks",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004227200286",
       "name": "FastAPI",
       "category": "Frameworks",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004239434706",
       "name": "Pandas",
       "category": "Libraries",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004242612626",
       "name": "NumPy",
       "category": "Libraries",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004247968021",
       "name": "Matplotlib",
       "category": "Libraries",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004259873470",
       "name": "Git",
       "category": "Tools and Platforms",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004304346230",
       "name": "Github",
       "category": "Tools and Platforms",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004310918498",
       "name": "Claude Code",
       "category": "Tools and Platforms",
-      "logo": null
+      "logo": null,
+      "order": 0
     },
     {
       "id": "20260412004320069995",
       "name": "Huggingface",
       "category": "Tools and Platforms",
-      "logo": null
+      "logo": null,
+      "order": 0
     }
   ],
   "experience": [
