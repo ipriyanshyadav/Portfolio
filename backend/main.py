@@ -36,10 +36,8 @@ os.makedirs(CV_DIR, exist_ok=True)
 app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
 
 # CORS
-ALLOWED_ORIGINS = [
-    os.getenv("FRONTEND_URL", "*"),
-    "http://localhost:3000",
-]
+_frontend_url = os.getenv("FRONTEND_URL", "*")
+ALLOWED_ORIGINS = ["*"] if _frontend_url == "*" else [_frontend_url, "http://localhost:3000"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
