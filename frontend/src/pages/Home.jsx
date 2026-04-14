@@ -7,13 +7,13 @@ export default function Home() {
   const homepage = data?.homepage || {};
   const {
     name = 'Priyansh',
-    subheading = 'Developer | Designer',
-    cta_text = "Let's Work Together",
-    cta_email = '',
-    note_enabled = false,
-    note_text = '',
-    status_enabled = true,
-    status_text = 'Available for opportunities',
+    // subheading = '',
+    // cta_text = "Let's Work Together",
+    // cta_email = '',
+    // note_enabled = false,
+    // note_text = '',
+    // status_enabled = true,
+    // status_text = '',
   } = homepage;
 
   const subtitleParts = subheading.split('|');
