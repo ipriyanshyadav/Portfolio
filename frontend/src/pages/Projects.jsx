@@ -15,7 +15,7 @@ export default function Projects() {
   const visibleProjects = showAll ? projects : projects.slice(0, LIMIT);
 
   return (
-    <section id="projects" className="py-20 px-6 min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="projects" className="py-20 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export default function Projects() {
               viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group p-6 rounded-xl cursor-pointer flex flex-col"
+              className="glow-card group p-6 rounded-xl cursor-pointer flex flex-col"
               style={{
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.08)',

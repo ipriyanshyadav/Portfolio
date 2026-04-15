@@ -71,7 +71,7 @@ export default function Contact() {
   ].filter(Boolean);
 
   return (
-    <section id="contact" className="py-20 px-6 min-h-screen flex items-center" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="contact" className="py-20 px-6 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,7 +127,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ delay: 0.2 }}
-            className="rounded-2xl p-8"
+            className="glow-card rounded-2xl p-8"
             style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(20px)' }}
           >
             <AnimatePresence mode="wait">

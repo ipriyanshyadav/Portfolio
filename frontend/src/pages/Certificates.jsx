@@ -65,7 +65,7 @@ export default function Certificates() {
   if (!certificates.length) return null;
 
   return (
-    <section id="certificates" className="py-20 px-6" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="certificates" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ export default function Certificates() {
               viewport={{ once: true, amount: 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
               onClick={() => setSelected(cert)}
-              className="p-6 rounded-xl cursor-pointer flex flex-col gap-2 hover:bg-white/10 transition-colors duration-300"
+              className="glow-card p-6 rounded-xl cursor-pointer flex flex-col gap-2 hover:bg-white/10 transition-colors duration-300"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(20px)' }}
             >
               <div className="flex items-start justify-between gap-2">

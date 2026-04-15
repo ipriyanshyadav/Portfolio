@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
 import { PortfolioProvider } from './context/PortfolioContext'
 import Navbar from './components/Navbar'
-import Background from './components/Background'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
@@ -12,6 +11,7 @@ import Contact from './pages/Contact'
 import LoadingScreen from './components/LoadingScreen'
 import ErrorBoundary from './components/ErrorBoundary'
 import { AnimatePresence, motion } from 'framer-motion'
+import useScrollGlow from './hooks/useScrollGlow'
 
 function SectionDivider() {
   return (
@@ -38,13 +38,13 @@ function SectionDivider() {
 }
 
 function App() {
+  useScrollGlow()
   return (
     <PortfolioProvider>
       <ErrorBoundary>
         <Suspense fallback={<LoadingScreen />}>
           <AnimatePresence mode="wait">
-            <div className="min-h-screen relative" style={{ backgroundColor: 'var(--color-bg)' }}>
-              <Background />
+            <div className="min-h-screen relative">
               <Navbar />
               <main className="relative z-10">
                 <Home />

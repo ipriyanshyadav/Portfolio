@@ -40,7 +40,7 @@ export default function About() {
   ].filter(Boolean);
 
   return (
-    <section id="about" className="relative py-20 px-6 overflow-hidden" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="about" className="relative py-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="flex items-start gap-3 p-4 rounded-xl border border-white/5"
+                  className="glow-card flex items-start gap-3 p-4 rounded-xl border border-white/5"
                   style={{
                     background: 'linear-gradient(135deg, rgba(99,102,241,0.04), rgba(168,85,247,0.04))',
                     backdropFilter: 'blur(8px)',

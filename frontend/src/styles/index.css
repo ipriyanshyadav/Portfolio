@@ -122,6 +122,26 @@ body {
   padding: 0 20px;
 }
 
+/* Glow Card - section items with reactive border glow */
+.glow-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.08s ease;
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  pointer-events: none;
+}
+
 /* Loading Skeleton */
 .skeleton {
   background: linear-gradient(

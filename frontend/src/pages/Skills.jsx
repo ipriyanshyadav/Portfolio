@@ -33,7 +33,7 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="py-20 px-6 min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="skills" className="py-20 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-xl border border-white/10 hover:bg-white/5 transition-all duration-300"
+              className="glow-card p-6 rounded-xl border border-white/10 hover:bg-white/5 transition-all duration-300"
               style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(20px)' }}
             >
               <div className="flex items-center gap-3 mb-4">

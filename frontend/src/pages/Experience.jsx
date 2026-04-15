@@ -81,7 +81,7 @@ function ExpCard({ exp, onClick }) {
   return (
     <div
       onClick={() => onClick(exp)}
-      className="p-6 rounded-xl cursor-pointer hover:bg-white/10 transition-colors duration-300"
+      className="glow-card p-6 rounded-xl cursor-pointer hover:bg-white/10 transition-colors duration-300"
       style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(20px)' }}
     >
       <h3 className="text-lg font-semibold text-white mb-1">{exp.role}</h3>
@@ -123,7 +123,7 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" ref={containerRef} className="py-20 px-6 min-h-screen relative overflow-hidden" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="experience" ref={containerRef} className="py-20 px-6 min-h-screen relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
