@@ -65,7 +65,7 @@ export default function Certificates() {
   if (!certificates.length) return null;
 
   return (
-    <section id="certificates" className="py-20 px-6 min-h-screen" style={{ backgroundColor: 'var(--color-bg)' }}>
+    <section id="certificates" className="py-20 px-6" style={{ backgroundColor: 'var(--color-bg)' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

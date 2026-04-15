@@ -322,6 +322,34 @@
       ]
     }
   ],
-  "certificates": [],
+  "certificates": [
+    {
+      "id": "20260415060719880832",
+      "title": "Generative AI Foundations",
+      "issuer": "AWS",
+      "date": "Jan 2026",
+      "credential_url": null,
+      "description": "Industry-focused training program on Generative AI, covering core concepts such as large language models (LLMs), transformer architectures, and prompt engineering techniques. Gained practical insights into building and deploying AI-powered applications using AWS services, along with understanding ethical AI considerations and real-world business use cases.",
+      "order": 0
+    },
+    {
+      "id": "20260415060939753186",
+      "title": "Python for Data Science",
+      "issuer": "Simplilearn",
+      "date": "Jan 2025",
+      "credential_url": null,
+      "description": "Developed strong proficiency in data analysis and manipulation using Python. Worked extensively with libraries such as NumPy, Pandas, and Matplotlib for data cleaning, exploration, and visualization. Applied statistical techniques and basic machine learning concepts to solve real-world data problems, strengthening analytical and problem-solving skills.",
+      "order": 1
+    },
+    {
+      "id": "20260415061102216802",
+      "title": "TCS iON Career Edge \u2013 Young Professional",
+      "issuer": "Tata Consultancy Services (TCS iON)",
+      "date": "Oct 2024",
+      "credential_url": null,
+      "description": "Completed a comprehensive career development program focused on enhancing professional and interpersonal skills. Gained expertise in communication, presentation, resume writing, group discussions, and interview techniques. Also covered business etiquette, effective email and telephone communication, along with foundational knowledge of IT and artificial intelligence concepts to prepare for corporate environments.",
+      "order": 2
+    }
+  ],
   "certificates_enabled": true
 }
