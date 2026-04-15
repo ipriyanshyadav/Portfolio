@@ -4,9 +4,9 @@
     "subheading": "Data Science | Generative AI & Agentic AI | AI/ML",
     "cta_text": "Let's Work Together ",
     "cta_email": "ipriyanshyadav@gmail.com",
-    "note_enabled": true,
-    "note_text": " ",
-    "status_enabled": false,
+    "note_enabled": false,
+    "note_text": " hi ",
+    "status_enabled": true,
     "status_text": "Available for opportunities"
   },
   "about": {
@@ -39,7 +39,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Image-Captioning-and-Segmentation",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/DL-Image-Captioning",
       "featured": true,
-      "order": 0
+      "order": 1
     },
     {
       "id": "20260412010224386821",
@@ -56,7 +56,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Personalised-Healthcare-Recommendation-System",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/AIML-Personalized-Healthcare-Recommendation-System",
       "featured": true,
-      "order": 0
+      "order": 2
     },
     {
       "id": "20260412010354896315",
@@ -72,7 +72,7 @@
       "github_url": "https://github.com/ipriyanshyadav/NLP-Duplicate-Question-Pairs",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/NLP-Duplicate-Question-Pairs?logs=build",
       "featured": true,
-      "order": 0
+      "order": 3
     },
     {
       "id": "20260412010535215249",
@@ -87,7 +87,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Patient-Management-System",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/FastAPI-Patient-Management-System",
       "featured": true,
-      "order": 0
+      "order": 4
     },
     {
       "id": "20260412010701666954",
@@ -103,7 +103,7 @@
       "github_url": "https://github.com/ipriyanshyadav/ai-chatbot-sentiment",
       "live_url": null,
       "featured": false,
-      "order": 0
+      "order": 5
     },
     {
       "id": "20260412010822470412",
@@ -122,7 +122,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Expense-Tracker",
       "live_url": null,
       "featured": false,
-      "order": 0
+      "order": 5
     },
     {
       "id": "20260412010948837095",
@@ -140,7 +140,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Insurance-Premium-Prediction",
       "live_url": null,
       "featured": false,
-      "order": 0
+      "order": 6
     }
   ],
   "skills": [
@@ -210,13 +210,6 @@
     {
       "id": "20260412004203788810",
       "name": "LangGraph",
-      "category": "Frameworks",
-      "logo": null,
-      "order": 0
-    },
-    {
-      "id": "20260412004209612735",
-      "name": "Langsmith",
       "category": "Frameworks",
       "logo": null,
       "order": 0
@@ -328,5 +321,7 @@
         "Achieved 84% training accuracy on disease prediction models through systematic deep learning model evaluation, feature engineering, and iterative model tuning across the full ML pipeline."
       ]
     }
-  ]
+  ],
+  "certificates": [],
+  "certificates_enabled": true
 }

@@ -11,7 +11,7 @@ export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
   const projects = data?.projects || [];
-  const LIMIT = 6;
+  const LIMIT = window.innerWidth < 768 ? 4 : 6;
   const visibleProjects = showAll ? projects : projects.slice(0, LIMIT);
 
   return (

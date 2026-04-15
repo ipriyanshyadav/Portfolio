@@ -88,7 +88,7 @@ def upload_image(file) -> Optional[str]:
 def render_sidebar():
     st.sidebar.markdown("## ⚙️ Navigation")
     pages = ["📊 Dashboard", "🏠 Homepage", "👤 About", "💼 Projects",
-             "🛠️ Skills", "🗂️ Experience", "📧 Contact", "⚡ Settings"]
+             "🛠️ Skills", "🗂️ Experience", "🏅 Certificates", "📧 Contact", "⚡ Settings"]
     selected = st.sidebar.radio("Go to", pages, index=0)
     st.sidebar.markdown("---")
     st.sidebar.info(f"Backend: {API_BASE_URL}")
@@ -554,6 +554,117 @@ def render_experience(data: Dict[str, Any], save_cb):
             st.markdown("---")
 
 
+def generate_id() -> str:
+    return datetime.now().strftime("%Y%m%d%H%M%S%f")
+
+
+# ========================
+# Certificates
+# ========================
+
+def render_certificates(data: Dict[str, Any], save_cb):
+    st.markdown('<p class="section-header">🏅 Certificates</p>', unsafe_allow_html=True)
+
+    enabled = data.get("certificates_enabled", True)
+    new_enabled = st.toggle("Show Certificates section on portfolio", value=enabled)
+    if new_enabled != enabled:
+        data["certificates_enabled"] = new_enabled
+        if save_cb(data):
+            st.success(f"✅ Certificates section {'enabled' if new_enabled else 'disabled'}!")
+            st.rerun()
+
+    st.markdown("---")
+    certificates = data.get("certificates", [])
+
+    with st.expander("➕ Add New Certificate", expanded=False):
+        with st.form("add_cert_form"):
+            title = st.text_input("Certificate Title *")
+            issuer = st.text_input("Issuer *", placeholder="e.g., Google, Coursera, AWS")
+            date = st.text_input("Date", placeholder="e.g., Jan 2024")
+            credential_url = st.text_input("Credential URL")
+            description = st.text_area("Description", height=80)
+
+            if st.form_submit_button("➕ Add Certificate") and title and issuer:
+                certificates.append({
+                    "id": generate_id(),
+                    "title": title,
+                    "issuer": issuer,
+                    "date": date or None,
+                    "credential_url": credential_url or None,
+                    "description": description or None,
+                    "order": len(certificates)
+                })
+                data["certificates"] = certificates
+                if save_cb(data):
+                    st.success("✅ Certificate added!")
+                    st.rerun()
+
+    st.markdown(f"### All Certificates ({len(certificates)})")
+    if not certificates:
+        st.info("No certificates yet.")
+        return
+
+    for idx, cert in enumerate(sorted(certificates, key=lambda c: c.get("order", 0))):
+        orig_idx = next(i for i, c in enumerate(certificates) if c["id"] == cert["id"])
+        with st.container():
+            col1, col2, col3 = st.columns([4, 1, 1])
+            with col1:
+                st.markdown(f"**{cert.get('title', 'Untitled')}** — *{cert.get('issuer', '')}*")
+                if cert.get("date"):
+                    st.caption(cert["date"])
+            with col2:
+                if st.button("✏️ Edit", key=f"edit_cert_{idx}"):
+                    st.session_state[f"edit_cert_{idx}"] = True
+            with col3:
+                if st.button("🗑️ Delete", key=f"delete_cert_{idx}"):
+                    st.session_state[f"confirm_delete_cert_{idx}"] = True
+
+            if st.session_state.get(f"edit_cert_{idx}", False):
+                with st.form(f"edit_cert_form_{idx}"):
+                    e_title = st.text_input("Title", value=cert.get("title", ""))
+                    e_issuer = st.text_input("Issuer", value=cert.get("issuer", ""))
+                    e_date = st.text_input("Date", value=cert.get("date", "") or "")
+                    e_url = st.text_input("Credential URL", value=cert.get("credential_url", "") or "")
+                    e_desc = st.text_area("Description", value=cert.get("description", "") or "", height=80)
+                    c1, c2 = st.columns(2)
+                    with c1:
+                        save = st.form_submit_button("💾 Save")
+                    with c2:
+                        cancel = st.form_submit_button("❌ Cancel")
+                    if save:
+                        certificates[orig_idx] = {
+                            "id": cert.get("id"),
+                            "title": e_title, "issuer": e_issuer,
+                            "date": e_date or None, "credential_url": e_url or None,
+                            "description": e_desc or None, "order": cert.get("order", 0)
+                        }
+                        data["certificates"] = certificates
+                        if save_cb(data):
+                            st.success("✅ Certificate updated!")
+                            st.session_state[f"edit_cert_{idx}"] = False
+                            st.rerun()
+                    if cancel:
+                        st.session_state[f"edit_cert_{idx}"] = False
+                        st.rerun()
+
+            if st.session_state.get(f"confirm_delete_cert_{idx}", False):
+                st.warning(f"Delete '{cert.get('title')}'?")
+                c1, c2 = st.columns(2)
+                with c1:
+                    if st.button("✅ Confirm", key=f"confirm_cert_{idx}"):
+                        certificates.pop(orig_idx)
+                        data["certificates"] = certificates
+                        if save_cb(data):
+                            st.success("✅ Deleted!")
+                            st.session_state[f"confirm_delete_cert_{idx}"] = False
+                            st.rerun()
+                with c2:
+                    if st.button("❌ Cancel", key=f"cancel_cert_{idx}"):
+                        st.session_state[f"confirm_delete_cert_{idx}"] = False
+                        st.rerun()
+            st.markdown("---")
+
+
 # ========================
 # Contact
 # ========================
@@ -637,6 +748,7 @@ def main():
         "💼 Projects": "projects",
         "🛠️ Skills": "skills",
         "🗂️ Experience": "experience",
+        "🏅 Certificates": "certificates",
         "📧 Contact": "contact",
         "⚡ Settings": "settings"
     }
@@ -658,6 +770,8 @@ def main():
         render_skills(data, save_portfolio_data)
     elif current_page == "experience":
         render_experience(data, save_portfolio_data)
+    elif current_page == "certificates":
+        render_certificates(data, save_portfolio_data)
     elif current_page == "contact":
         render_contact(data, save_portfolio_data)
     elif current_page == "settings":

@@ -82,6 +82,15 @@ class Experience(BaseModel):
     is_current: bool = False
     highlights: List[str] = []
 
+class Certificate(BaseModel):
+    id: str
+    title: str
+    issuer: str
+    date: Optional[str] = None
+    credential_url: Optional[str] = None
+    description: Optional[str] = None
+    order: int = 0
+
 class ContactConfig(BaseModel):
     email: str
     linkedin: Optional[str] = None
@@ -118,6 +127,8 @@ class PortfolioData(BaseModel):
     projects: List[Project] = []
     skills: List[Skill] = []
     experience: List[Experience] = []
+    certificates: List[Certificate] = []
+    certificates_enabled: bool = True
 
 # --- Helper Functions ---
 def migrate_project(p: dict) -> dict:
@@ -161,6 +172,9 @@ def load_data() -> PortfolioData:
             # Ensure about has highlights
             if "about" in raw and "highlights" not in raw["about"]:
                 raw["about"]["highlights"] = []
+            # Ensure certificates fields exist
+            raw.setdefault("certificates", [])
+            raw.setdefault("certificates_enabled", True)
 
             return PortfolioData(**raw)
     except Exception as e:
@@ -195,7 +209,9 @@ def get_default_data() -> PortfolioData:
         ),
         projects=[],
         skills=[],
-        experience=[]
+        experience=[],
+        certificates=[],
+        certificates_enabled=True
     )
 
 def send_email(to_email: str, subject: str, body: str):

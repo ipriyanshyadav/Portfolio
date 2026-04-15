@@ -7,6 +7,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Experience from './pages/Experience'
+import Certificates from './pages/Certificates'
 import Contact from './pages/Contact'
 import LoadingScreen from './components/LoadingScreen'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -55,6 +56,8 @@ function App() {
                 <Skills />
                 <SectionDivider />
                 <Experience />
+                <SectionDivider />
+                <Certificates />
                 <SectionDivider />
                 <Contact />
               </main>
