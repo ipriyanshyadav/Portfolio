@@ -25,12 +25,14 @@ export default function Skills() {
   if (Array.isArray(skillsData)) {
     skillsData.forEach((skill) => {
       const cat = skill.category || 'Tools & Platforms';
-      if (!grouped[cat]) grouped[cat] = [];
-      grouped[cat].push(skill);
+      if (!grouped[cat]) grouped[cat] = { order: skill.order ?? 0, skills: [] };
+      grouped[cat].skills.push(skill);
     });
   } else {
-    grouped = skillsData;
+    grouped = Object.fromEntries(Object.entries(skillsData).map(([k, v]) => [k, { order: 0, skills: v }]));
   }
+
+  const sortedCategories = Object.entries(grouped).sort((a, b) => a[1].order - b[1].order);
 
   return (
     <section id="skills" className="py-20 px-6 min-h-screen">
@@ -46,7 +48,7 @@ export default function Skills() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {Object.entries(grouped).map(([category, categorySkills], index) => (
+          {sortedCategories.map(([category, { skills: categorySkills }], index) => (
             <motion.div
               key={category}
               initial={{ opacity: 0, y: 20 }}

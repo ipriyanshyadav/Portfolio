@@ -10,7 +10,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showAll, setShowAll] = useState(false);
 
-  const projects = data?.projects || [];
+  const projects = [...(data?.projects || [])].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
   const LIMIT = window.innerWidth < 768 ? 4 : 6;
   const visibleProjects = showAll ? projects : projects.slice(0, LIMIT);
 
@@ -51,7 +51,7 @@ export default function Projects() {
                 style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(168,85,247,0.2) 100%)' }}
               >
                 {project.image_url ? (
-                  <img src={project.image_url.startsWith('http') ? project.image_url : `${API_BASE}${project.image_url}`} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={project.image_url.startsWith('http') ? project.image_url : `${API_BASE}${project.image_url}`} alt={project.title} className="absolute inset-0 w-full h-full object-contain" />
                 ) : (
                   <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />

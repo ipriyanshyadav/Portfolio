@@ -26,7 +26,7 @@
   "projects": [
     {
       "id": "20260412005522366149",
-      "title": "Image Captioning",
+      "title": "Image Captioning and Segmentation System",
       "description": "Developed an end-to-end image captioning pipeline using a ResNet-50 encoder and LSTM-based decoder trained on Flickr8K images, achieving a BLEU score of 0.7 \u2014 demonstrating strong caption coherence and context-awareness. Implemented semantic image segmentation using DeepLabV3 with ResNet-50 backbone for pixel-level object classification, enhancing the system's visual understanding capabilities.",
       "image_url": "/uploads/20260412012619.png",
       "tech_stack": [
@@ -39,7 +39,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Image-Captioning-and-Segmentation",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/DL-Image-Captioning",
       "featured": true,
-      "order": 1
+      "order": 2
     },
     {
       "id": "20260412010224386821",
@@ -56,7 +56,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Personalised-Healthcare-Recommendation-System",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/AIML-Personalized-Healthcare-Recommendation-System",
       "featured": true,
-      "order": 2
+      "order": 3
     },
     {
       "id": "20260412010354896315",
@@ -72,7 +72,7 @@
       "github_url": "https://github.com/ipriyanshyadav/NLP-Duplicate-Question-Pairs",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/NLP-Duplicate-Question-Pairs?logs=build",
       "featured": true,
-      "order": 3
+      "order": 4
     },
     {
       "id": "20260412010535215249",
@@ -87,7 +87,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Patient-Management-System",
       "live_url": "https://huggingface.co/spaces/ipriyanshyadav/FastAPI-Patient-Management-System",
       "featured": true,
-      "order": 4
+      "order": 5
     },
     {
       "id": "20260412010701666954",
@@ -103,12 +103,12 @@
       "github_url": "https://github.com/ipriyanshyadav/ai-chatbot-sentiment",
       "live_url": null,
       "featured": false,
-      "order": 5
+      "order": 6
     },
     {
       "id": "20260412010822470412",
       "title": "Expense Tracker",
-      "description": "Built an intelligent chatbot integrated with sentiment analysis to classify user emotions and adapt responses dynamically. Implemented NLP pipelines including tokenization, vectorization, and classification models to improve conversational accuracy. Enhanced user interaction by enabling emotion-aware responses, improving engagement and contextual relevance.",
+      "description": "Developed a full-stack expense tracking system enabling users to record, update, and analyze financial transactions with persistent MySQL storage.\nBuilt RESTful APIs using FastAPI to support CRUD operations, ensuring efficient data handling and scalability.\nDesigned an interactive frontend interface for real-time expense visualization and efficient financial management.",
       "image_url": "/uploads/20260412012816.png",
       "tech_stack": [
         "Python",
@@ -122,7 +122,7 @@
       "github_url": "https://github.com/ipriyanshyadav/Expense-Tracker",
       "live_url": null,
       "featured": false,
-      "order": 5
+      "order": 7
     },
     {
       "id": "20260412010948837095",
@@ -140,140 +140,178 @@
       "github_url": "https://github.com/ipriyanshyadav/Insurance-Premium-Prediction",
       "live_url": null,
       "featured": false,
-      "order": 6
+      "order": 8
+    },
+    {
+      "id": "20260417055504439195",
+      "title": "Agentic RAG Chatbot and Blog Generation System",
+      "description": "Built an agentic AI system integrating a RAG-based chatbot with dynamic tool usage (web search, calculator, APIs) for context-aware and accurate responses.\nDesigned a multi-agent architecture enabling intelligent decision-making for tool selection, retrieval, and response generation.\nDeveloped an LLM-powered blog generation agent with multiple writing modes for structured, high-quality content creation.\nImplemented persistent memory and context management to support coherent multi-turn conversations and long-term interaction handling.",
+      "image_url": "/uploads/20260417060026.png",
+      "tech_stack": [
+        "Python",
+        "Langchain",
+        "Langgraph",
+        "RAG",
+        "Streamlit"
+      ],
+      "github_url": "https://github.com/ipriyanshyadav/Combined-Rag-Tool-Chatbot-Blog-Writing-agent-",
+      "live_url": "https://huggingface.co/spaces/ipriyanshyadav/Combined-Rag-Tool-Chatbot-and-Blog-Writing-agent",
+      "featured": true,
+      "order": 1
     }
   ],
   "skills": [
     {
       "id": "20260412003858962335",
       "name": "Python",
-      "category": "Programming",
+      "category": "Programming Language",
       "logo": null,
-      "order": 0
-    },
-    {
-      "id": "20260412003905988171",
-      "name": "MySQL",
-      "category": "Programming",
-      "logo": null,
-      "order": 0
+      "order": 1
     },
     {
       "id": "20260412003937425004",
       "name": "Agentic AI",
-      "category": "Artificial Intelligence and Machine Learning",
+      "category": "Artificial Intelligence",
       "logo": null,
-      "order": 0
+      "order": 2
     },
     {
       "id": "20260412003949043152",
       "name": "Generative AI",
-      "category": "Artificial Intelligence and Machine Learning",
+      "category": "Artificial Intelligence",
       "logo": null,
-      "order": 0
+      "order": 2
     },
     {
       "id": "20260412004005207961",
       "name": "Machine Learning",
-      "category": "Artificial Intelligence and Machine Learning",
+      "category": "Artificial Intelligence",
       "logo": null,
-      "order": 0
+      "order": 2
     },
     {
       "id": "20260412004014189798",
       "name": "Deep Learning",
-      "category": "Artificial Intelligence and Machine Learning",
+      "category": "Artificial Intelligence",
       "logo": null,
-      "order": 0
+      "order": 2
     },
     {
       "id": "20260412004057142002",
       "name": "Natural Language Processing",
-      "category": "Artificial Intelligence and Machine Learning",
+      "category": "Artificial Intelligence",
       "logo": null,
-      "order": 0
+      "order": 2
     },
     {
       "id": "20260412004132386176",
       "name": "PyTorch",
       "category": "Frameworks",
       "logo": null,
-      "order": 0
+      "order": 3
     },
     {
       "id": "20260412004147101325",
       "name": "Langchain",
       "category": "Frameworks",
       "logo": null,
-      "order": 0
+      "order": 3
     },
     {
       "id": "20260412004203788810",
       "name": "LangGraph",
       "category": "Frameworks",
       "logo": null,
-      "order": 0
+      "order": 3
     },
     {
       "id": "20260412004219490106",
       "name": "Scikit-learn",
       "category": "Frameworks",
       "logo": null,
-      "order": 0
+      "order": 3
     },
     {
       "id": "20260412004227200286",
       "name": "FastAPI",
       "category": "Frameworks",
       "logo": null,
-      "order": 0
+      "order": 3
     },
     {
       "id": "20260412004239434706",
       "name": "Pandas",
       "category": "Libraries",
       "logo": null,
-      "order": 0
+      "order": 4
     },
     {
       "id": "20260412004242612626",
       "name": "NumPy",
       "category": "Libraries",
       "logo": null,
-      "order": 0
+      "order": 4
     },
     {
       "id": "20260412004247968021",
       "name": "Matplotlib",
       "category": "Libraries",
       "logo": null,
-      "order": 0
+      "order": 4
     },
     {
       "id": "20260412004259873470",
       "name": "Git",
-      "category": "Tools and Platforms",
+      "category": "Tools",
       "logo": null,
-      "order": 0
+      "order": 6
     },
     {
       "id": "20260412004304346230",
       "name": "Github",
-      "category": "Tools and Platforms",
+      "category": "Tools",
       "logo": null,
-      "order": 0
+      "order": 6
     },
     {
       "id": "20260412004310918498",
       "name": "Claude Code",
-      "category": "Tools and Platforms",
+      "category": "Tools",
+      "logo": null,
+      "order": 6
+    },
+    {
+      "id": "20260417061026892327",
+      "name": "MySQL",
+      "category": "Databases",
+      "logo": null,
+      "order": 5
+    },
+    {
+      "id": "20260417061032303930",
+      "name": "PostgreSQL",
+      "category": "Databases",
+      "logo": null,
+      "order": 5
+    },
+    {
+      "id": "20260417061053124947",
+      "name": "RAG",
+      "category": "Artificial Intelligence",
       "logo": null,
       "order": 0
     },
     {
-      "id": "20260412004320069995",
-      "name": "Huggingface",
-      "category": "Tools and Platforms",
+      "id": "20260417061059258203",
+      "name": "Machine Learning",
+      "category": "Artificial Intelligence",
+      "logo": null,
+      "order": 0
+    },
+    {
+      "id": "20260417061126790222",
+      "name": "Langsmith",
+      "category": "Tools",
       "logo": null,
       "order": 0
     }

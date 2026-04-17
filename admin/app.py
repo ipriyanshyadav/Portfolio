@@ -398,20 +398,33 @@ def render_skills(data: Dict[str, Any], save_cb):
         st.info("No skills yet.")
         return
 
-    st.markdown("**Set display order** — lower number appears first within each category. Click 💾 Save Order to apply.")
-    order_map = {}
-    for s in sorted(skills, key=lambda x: (x.get("category", ""), x.get("order", 0))):
-        order_map[s["id"]] = st.number_input(
-            f"#{s.get('order', 0)}  [{s.get('category', '')}] {s.get('name', '')}",
-            min_value=0, value=s.get("order", 0), step=1,
-            key=f"order_skill_{s['id']}"
-        )
-    if st.button("💾 Save Order", key="save_skills_order"):
+    st.markdown("**Set category display order & name** — lower number appears first. Click 💾 Save to apply.")
+    # Build unique categories with their current order
+    cat_order_map = {}
+    for s in skills:
+        cat = s.get("category", "Other")
+        cat_order_map.setdefault(cat, s.get("order", 0))
+    new_cat_order = {}
+    new_cat_name = {}
+    for cat in sorted(cat_order_map, key=lambda c: cat_order_map[c]):
+        c1, c2 = st.columns([2, 3])
+        with c1:
+            new_cat_order[cat] = st.number_input(
+                f"Order", min_value=0, value=cat_order_map[cat], step=1,
+                key=f"order_cat_{cat}", label_visibility="collapsed"
+            )
+        with c2:
+            new_cat_name[cat] = st.text_input(
+                f"Name", value=cat, key=f"name_cat_{cat}", label_visibility="collapsed"
+            )
+    if st.button("💾 Save Categories", key="save_skills_order"):
         for s in skills:
-            s["order"] = order_map[s["id"]]
+            old_cat = s.get("category", "Other")
+            s["category"] = new_cat_name.get(old_cat, old_cat)
+            s["order"] = new_cat_order.get(old_cat, 0)
         data["skills"] = skills
         if save_cb(data):
-            st.success("✅ Skill order saved!")
+            st.success("✅ Categories saved!")
             st.rerun()
 
     st.markdown("---")
@@ -423,16 +436,43 @@ def render_skills(data: Dict[str, Any], save_cb):
     for category, cat_skills in sorted(skills_by_cat.items()):
         with st.expander(f"📁 {category} ({len(cat_skills)})", expanded=True):
             for skill in sorted(cat_skills, key=lambda x: x.get("order", 0)):
-                col1, col2 = st.columns([5, 1])
+                skill_idx = next((i for i, s in enumerate(skills) if s.get("id") == skill.get("id")), None)
+                col1, col2, col3 = st.columns([5, 1, 1])
                 with col1:
-                    st.markdown(f"**{skill.get('name', 'Untitled')}** — order: {skill.get('order', 0)}")
+                    st.markdown(f"**{skill.get('name', 'Untitled')}")
                 with col2:
-                    skill_idx = next((i for i, s in enumerate(skills) if s.get("id") == skill.get("id")), None)
+                    if skill_idx is not None and st.button("✏️", key=f"edit_skill_btn_{skill_idx}"):
+                        st.session_state[f"edit_skill_{skill_idx}"] = True
+                with col3:
                     if skill_idx is not None and st.button("🗑️", key=f"del_skill_{skill_idx}"):
                         skills.pop(skill_idx)
                         data["skills"] = skills
                         if save_cb(data):
                             st.success("✅ Skill deleted!")
+                            st.rerun()
+
+                if skill_idx is not None and st.session_state.get(f"edit_skill_{skill_idx}", False):
+                    with st.form(f"edit_skill_form_{skill_idx}"):
+                        e_name = st.text_input("Skill Name", value=skill.get("name", ""))
+                        e_category = st.text_input("Category", value=skill.get("category", ""))
+                        c1, c2 = st.columns(2)
+                        with c1:
+                            save = st.form_submit_button("💾 Save")
+                        with c2:
+                            cancel = st.form_submit_button("❌ Cancel")
+                        if save:
+                            skills[skill_idx] = {
+                                **skills[skill_idx],
+                                "name": e_name,
+                                "category": e_category,
+                            }
+                            data["skills"] = skills
+                            if save_cb(data):
+                                st.success("✅ Skill updated!")
+                                st.session_state[f"edit_skill_{skill_idx}"] = False
+                                st.rerun()
+                        if cancel:
+                            st.session_state[f"edit_skill_{skill_idx}"] = False
                             st.rerun()
 
 
