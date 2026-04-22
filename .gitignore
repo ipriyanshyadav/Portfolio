@@ -10,7 +10,6 @@ __pycache__/
 
 # Virtual environments
 venv/
-1.venv/
 .venv/
 
 # Node
@@ -19,7 +18,6 @@ dist/
 
 # IDE
 .idea/
-.jbeval/
 *.iml
 
 # OS

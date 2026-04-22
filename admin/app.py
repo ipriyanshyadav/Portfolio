@@ -530,9 +530,9 @@ def render_experience(data: Dict[str, Any], save_cb):
                     if len(highlights) > 2:
                         st.caption(f"+{len(highlights)-2} more highlights")
             with col2:
-                if st.button("✏️ Edit", key=f"edit_exp_{idx}"):
+                if st.button("✏️ Edit", key=f"btn_edit_exp_{idx}"):
                     st.session_state[f"edit_exp_{idx}"] = True
-                if st.button("🗑️ Delete", key=f"delete_exp_{idx}"):
+                if st.button("🗑️ Delete", key=f"btn_delete_exp_{idx}"):
                     st.session_state[f"confirm_delete_exp_{idx}"] = True
 
             if st.session_state.get(f"edit_exp_{idx}", False):
@@ -653,10 +653,10 @@ def render_certificates(data: Dict[str, Any], save_cb):
                 if cert.get("date"):
                     st.caption(cert["date"])
             with col2:
-                if st.button("✏️ Edit", key=f"edit_cert_{idx}"):
+                if st.button("✏️ Edit", key=f"btn_edit_cert_{idx}"):
                     st.session_state[f"edit_cert_{idx}"] = True
             with col3:
-                if st.button("🗑️ Delete", key=f"delete_cert_{idx}"):
+                if st.button("🗑️ Delete", key=f"btn_delete_cert_{idx}"):
                     st.session_state[f"confirm_delete_cert_{idx}"] = True
 
             if st.session_state.get(f"edit_cert_{idx}", False):

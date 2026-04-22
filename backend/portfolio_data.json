@@ -10,7 +10,7 @@
     "status_text": "Available for opportunities"
   },
   "about": {
-    "intro": "Skilled in Generative AI, Agentic AI, RAG pipelines, and deep learning \u2014 with 3 internships delivering production-ready AI/ML systems across data science and Python backend domains. Driven to engineer intelligent, scalable solutions with clean efficient code.",
+    "intro": "Skilled in Generative AI, Agentic AI, RAG pipelines and deep learning \u2014 with 3 internships delivering AI/ML systems across DataScience and Python backend domains, including hands-on experience working on PwC\u2019s Project NTH (Navigation Tax Hub).Driven to engineer intelligent, scalable solutions with clean efficient code.",
     "contact_enabled": true,
     "highlights": [
       "2026 Graduate",
@@ -218,13 +218,6 @@
       "order": 3
     },
     {
-      "id": "20260412004203788810",
-      "name": "LangGraph",
-      "category": "Frameworks",
-      "logo": null,
-      "order": 3
-    },
-    {
       "id": "20260412004219490106",
       "name": "Scikit-learn",
       "category": "Frameworks",
@@ -288,13 +281,6 @@
       "order": 5
     },
     {
-      "id": "20260417061032303930",
-      "name": "PostgreSQL",
-      "category": "Databases",
-      "logo": null,
-      "order": 5
-    },
-    {
       "id": "20260417061053124947",
       "name": "RAG",
       "category": "Artificial Intelligence",
@@ -314,6 +300,34 @@
       "category": "Tools",
       "logo": null,
       "order": 0
+    },
+    {
+      "id": "20260422063758929099",
+      "name": "SQL",
+      "category": "Programming Language",
+      "logo": null,
+      "order": 0
+    },
+    {
+      "id": "20260422063842185480",
+      "name": "FAISS",
+      "category": "Databases",
+      "logo": null,
+      "order": 0
+    },
+    {
+      "id": "20260422063859485406",
+      "name": "ChromaDB",
+      "category": "Databases",
+      "logo": null,
+      "order": 0
+    },
+    {
+      "id": "20260422063916767100",
+      "name": "Docker",
+      "category": "Tools",
+      "logo": null,
+      "order": 0
     }
   ],
   "experience": [
@@ -326,10 +340,9 @@
       "location": "Gurgaon, Haryana",
       "is_current": false,
       "highlights": [
-        "Resolved 40+ bugs and implemented new features on PwC's Navigation Tax Hub (NTH) \u2014 a critical tax management platform serving Chartered Accountants \u2014 accelerating system stability and production readiness.",
-        "Engineered and deployed an AI-powered voice chatbot from scratch using Python backend services with integrated speech-to-text inference, enabling seamless voice-driven interactions for end users.",
-        "Led end-to-end development of a Task Management System, architecting 30+ RESTful CRUD APIs and designing the complete database schema, reducing manual task tracking effort significantly.",
-        "Implemented API abstraction layers to orchestrate AI inference workflows, ensuring reliable communication across voice input, backend services, and downstream systems with zero downtime."
+        "Resolved 40+ bugs on PwC's Navigation Tax Hub (NTH) \u2014 accelerating system stability and cutting time-to production-readiness by eliminating errors across release pipelines, built automated test cases for python based backend services.",
+        "Developed and deployed an AI-powered voice chatbot from scratch using Python backend services with integrated speech-to-text inference, enabling seamless voice-driven interactions for end users.",
+        "Led the development of a Task Management System, built 30+ RESTful CRUD APIs, user authentication and tracking protocols and designing the complete database schema using PostgreSQL."
       ]
     },
     {
@@ -341,9 +354,9 @@
       "location": "Bangalore, Karnataka",
       "is_current": false,
       "highlights": [
-        "Architected and deployed a RAG-based AI chatbot and personalized recommendation system using LLMs, NLP, and ML/DL algorithms, achieving 92% retrieval accuracy and enabling context-aware, personalized user interactions.",
-        "Engineered features on a 30K-record supervised dataset using Pandas, driving high-quality model inputs and reducing data inconsistencies that improved downstream model performance.",
-        "Developed automated test cases in Python and built Matplotlib-based visualizations and analytical dashboards to support model evaluation, performance monitoring, and stakeholder reporting."
+        "Worked on development of a RAG-based AI chatbot with personalized recommendation system using LLMs, NLP, and DL algorithms, contributed in achieving 92% retrieval accuracy and enabling context-aware, personalized user interactions.",
+        "Engineered features on a 80K-record supervised dataset using Pandas eliminating data inconsistencies across pipelines and directly improving model\u2019s prediction accuracy and performance.",
+        "Developed automated test cases in Python and built Matplotlib-based visualizations and analytical dashboards to support model evaluation, performance monitoring."
       ]
     },
     {
@@ -355,8 +368,8 @@
       "location": "Gurgaon, Haryana",
       "is_current": false,
       "highlights": [
-        "Designed and delivered a personalized healthcare recommendation system for disease prediction and medicine suggestions by leveraging CNN and LSTM deep learning architectures with NLP-based techniques.",
-        "Achieved 84% training accuracy on disease prediction models through systematic deep learning model evaluation, feature engineering, and iterative model tuning across the full ML pipeline."
+        "Developed a healthcare recommendation model for disease prediction, suggesting medicine accordingly with future risk and generating a daily routine for exercise with diet plan.",
+        "Achieved 84% training accuracy on prediction models using feature engineering, NLP and Deep Learning techniques."
       ]
     }
   ],
@@ -372,7 +385,7 @@
     },
     {
       "id": "20260415060939753186",
-      "title": "Python for Data Science",
+      "title": "Data Science and AI",
       "issuer": "Simplilearn",
       "date": "Jan 2025",
       "credential_url": null,
